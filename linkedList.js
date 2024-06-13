@@ -1,5 +1,7 @@
 class LinkedList {
-  constructor () {
-    this.list = [];
+  constructor (node) {
+    this.list = [node.value];
   }
 }
+
+export default LinkedList

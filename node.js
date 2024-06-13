@@ -4,3 +4,5 @@ class Node {
     this.nextNode = null;
   }
 }
+
+export default Node
