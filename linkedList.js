@@ -1,6 +1,20 @@
+import Node from "./node.js";
+
 class LinkedList {
-  constructor (node) {
-    this.list = [node.value];
+  constructor () {
+    this.head = null;
+    this.list = '';
+  }
+
+  append (value) {
+    const newNode =  new Node(value);
+    if (this.head === null) {
+      this.head = newNode;
+      this.list += newNode.value;
+      this.list += '->'
+      console.log(this.list)
+      return this.list
+    }
   }
 }
 
