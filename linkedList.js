@@ -120,6 +120,33 @@ class LinkedList {
     list += 'null';
     return list;
   }
+
+  insertAt (value, index) {
+    if (
+      typeof  index !== 'number' ||
+      !this.head || 
+      index > this.size() || 
+      index < 0
+      ) {
+        return;
+      }
+    const newNode = new Node(value);
+    if (index === 0) {
+      newNode.nextNode = this.head;
+      this.head = newNode;
+      return;
+    }
+    let currentIndex = 0;
+    let prevNode = null;
+    let current = this.head;
+    while (currentIndex < index) {
+      prevNode = current;
+      current = current.nextNode;
+      currentIndex += 1;
+    }
+    newNode.nextNode = current
+    prevNode.nextNode = newNode;
+  }
 }
 
 export default LinkedList

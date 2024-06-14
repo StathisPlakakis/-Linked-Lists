@@ -17,3 +17,6 @@ newList.pop()
 console.log(newList.toString())
 newList.prepend(25)
 console.log(newList.toString())
+newList.insertAt(100,22)
+console.log(newList.toString())
+
