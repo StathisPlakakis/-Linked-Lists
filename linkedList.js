@@ -101,6 +101,15 @@ class LinkedList {
     }
     prevNode.nextNode = null;
   }
+
+  contains (value) {
+    let current = this.head;
+    while (current) {
+      if (current.value === value) return true;
+      current = current.nextNode;
+    }
+    return false;
+  }
 }
 
 export default LinkedList
