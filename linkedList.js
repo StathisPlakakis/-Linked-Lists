@@ -59,6 +59,15 @@ class LinkedList {
     if (!this.head) return null;
     return this.head.value;
   }
+
+  tail () {
+    if (!this.head) return null;
+    let current = this.head;
+    while (current.nextNode) {
+      current = current.nextNode;
+    }
+    return current.value;
+  }
 }
 
 export default LinkedList
