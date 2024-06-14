@@ -2,21 +2,14 @@
 import LinkedList from "./linkedList.js"
 
 const newList = new LinkedList();
-console.log(newList.toString())
 newList.append(3)
-console.log(newList.toString())
-newList.append(3)
-console.log(newList.toString())
+newList.append(4)
 newList.append(5)
-console.log(newList.toString())
 newList.append(10)
-console.log(newList.toString())
 newList.prepend(20)
-console.log(newList.toString())
 newList.pop()
-console.log(newList.toString())
 newList.prepend(25)
-console.log(newList.toString())
-newList.insertAt(100,22)
+newList.insertAt(100,2)
+newList.removeAt(0)
 console.log(newList.toString())
 
