@@ -15,3 +15,6 @@ console.log(newList.size())
 console.log(newList.headS())
 console.log(newList.tail())
 console.log(newList.at(0))
+newList.pop()
+console.log(newList.tail())
+
