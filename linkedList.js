@@ -54,6 +54,11 @@ class LinkedList {
     }
     return numberOfNodes;
   }
+
+  headS () {
+    if (!this.head) return null;
+    return this.head.value;
+  }
 }
 
 export default LinkedList
