@@ -57,7 +57,7 @@ class LinkedList {
 
   headS () {
     if (!this.head) return null;
-    return this.head.value;
+    return this.head;
   }
 
   tail () {
@@ -66,7 +66,25 @@ class LinkedList {
     while (current.nextNode) {
       current = current.nextNode;
     }
-    return current.value;
+    return current;
+  }
+
+  at (index) {
+    if (
+        typeof  index !== 'number' ||
+        !this.head || 
+        index > this.size() - 1 || 
+        index < 0
+        ) {
+          return null;
+        }
+    let currentIndex = 0;
+    let current = this.head;
+    while (currentIndex < index) {
+      current = current.nextNode;
+      currentIndex += 1;
+    }
+    return current;
   }
 }
 
