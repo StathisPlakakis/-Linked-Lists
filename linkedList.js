@@ -41,6 +41,19 @@ class LinkedList {
     this.list = `${newNode.value}->` + this.list
     console.log(this.list)
   }
+
+  size () {
+    if (!this.head) {
+      return 0;
+    }
+    let numberOfNodes = 1;
+    let current = this.head;
+    while (current.nextNode) {
+      current = current.nextNode;
+      numberOfNodes += 1;
+    }
+    return numberOfNodes;
+  }
 }
 
 export default LinkedList
